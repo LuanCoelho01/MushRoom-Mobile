@@ -26,14 +26,14 @@
 
             <Label Text=" CNPJ" FontAttributes="Bold" />
             <Border Stroke="Black" StrokeShape="RoundRectangle 10" Background="#DA7D2B">
-            <Entry x:Name="txt_cnpj" Text="{Binding CNPJ}" Keyboard="Numeric" />
+            <Entry x:Name="txt_cnpj" Text="{Binding CNPJ}" Keyboard="Numeric" TextChanged="txt_cnpj_TextChanged"/>
         </Border>
 
             <Label/>
 
             <Label Text=" Telefone" FontAttributes="Bold" />
             <Border Stroke="Black" StrokeShape="RoundRectangle 10" Background="#DA7D2B">
-            <Entry x:Name="txt_telefone" Text="{Binding Telefone}" Keyboard="Numeric" />
+            <Entry x:Name="txt_telefone" Text="{Binding Telefone}" Keyboard="Numeric" TextChanged="txt_telefone_TextChanged"/>
         </Border>
 
 

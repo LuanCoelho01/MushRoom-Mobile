@@ -4,6 +4,7 @@
              x:Class="MushRoom.Views.NovoFornecedor"
              Background="Chocolate">
 
+
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/> 
     </ContentPage.ToolbarItems>-->
@@ -16,28 +17,30 @@
         <VerticalStackLayout Spacing="8" Padding="10">
             <Label Text=" Fornecedor" FontAttributes="Bold" />
             <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
-                <Entry x:Name="txt_fornecedor" />
+                <Entry x:Name="txt_fornecedor" Placeholder="Digite o nome do fornecedor" PlaceholderColor="LightGray" />
             </Border>
 
             <Label/>
 
             <Label Text=" Produto"  FontAttributes="Bold"/>
             <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
-                <Entry x:Name="txt_produto" />
+                <Entry x:Name="txt_produto" Placeholder="Digite o nome do produto" PlaceholderColor="LightGray" />
             </Border>
 
             <Label/>
 
-            <Label Text=" CNPJ" FontAttributes="Bold" />
+            <Label Text=" CNPJ " FontAttributes="Bold" />
             <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
-                <Entry x:Name="txt_cnpj" />
+                <Entry x:Name="txt_cnpj" TextChanged="txt_cnpj_TextChanged" Placeholder="Digite o CNPJ" PlaceholderColor="LightGray" Keyboard="Numeric"/>
             </Border>
 
             <Label/>
 
             <Label Text=" Telefone" FontAttributes="Bold"/>
             <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
-                <Entry x:Name="txt_telefone" CursorPosition="20"/>
+                <Entry x:Name="txt_telefone" TextChanged="txt_telefone_TextChanged" Placeholder="Digite o Telefone" PlaceholderColor="LightGray" Keyboard="Telephone"/>
+
+                <!--<Entry x:Name="txt_telefone" CursorPosition="20"/>-->
             </Border>
 
             <Label/>
