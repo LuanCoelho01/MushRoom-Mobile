@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MushRoom.Views.ListaFornecedor"
+             BackgroundColor="Chocolate">
+
+    <VerticalStackLayout>
+        <Label Text="Fornecedores" FontFamily="BebasNeue-Regular" FontSize="Title" HorizontalTextAlignment="Center"/>
+
+        <Frame Padding="10" Margin="10" BackgroundColor="#d77834">
+    
+    <VerticalStackLayout>
+        
+        
+        <SearchBar x:Name="txt_search" Placeholder="Busca de Fornecedores" PlaceholderColor="Black" TextColor="Black"
+                   Margin="10" TextChanged="txt_search_TextChanged"/>
+        
+            <ListView x:Name="lst_fornecedores" ItemSelected="lst_fornecedores_ItemSelected">
+
+                    <ListView.Header>
+                        <Grid ColumnDefinitions="* , *, *, *" Padding="5">
+
+                            <!--<Label Grid.Column="0" Text="ID" IsVisible="False"/>-->
+                            <Label Grid.Column="0" Text="Fornecedor" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="1" Text="Produto" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="2" Text=" CNPJ" FontAttributes="Bold" FontSize="12"  />
+                            <Label Grid.Column="3" Text="  Telefone" FontAttributes="Bold" FontSize="12" />
+                        </Grid>
+
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Remover" Clicked="MenuItem_Clicked"/>
+                        </ViewCell.ContextActions>
+
+                        <Grid ColumnDefinitions="*, *, *, *" HorizontalOptions="Fill">
+                            <!--<Label Grid.Column="0" Text="{Binding Id}" IsVisible="False"/>-->
+                                <Label Grid.Column="0" 
+                                       Grid.Row="0"
+                                       Text="{Binding NomeFornecedor}" 
+                                       FontSize="10" 
+                                       Padding="5"/>
+
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding NomeProduto}"
+                                       FontSize="10"
+                                       Padding="5"/>
+
+                                <Label Grid.Column="2"
+                                       Grid.Row="2"
+                                       Text="{Binding CNPJ}"
+                                       FontSize="10"
+                                       Padding="5"/>
+
+                                    <Label Grid.Column="3"
+                                       Grid.Row="3"
+                                       Text="{Binding Telefone}"
+                                       FontSize="10"
+                                       Padding="5"/>
+                                </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+    </Frame>
+        <Border Margin="10"
+                MaximumWidthRequest="150"
+                Stroke="Black"
+                StrokeShape="RoundRectangle 10"
+                BackgroundColor="#DA7D2B">
+            <Button Text="Cadastrar" 
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="#DA7D2B"
+                    Margin="10"
+                    TextColor="Black"
+                    FontSize="15"/>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

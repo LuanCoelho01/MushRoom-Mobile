@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MushRoom.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MushRoom.Views"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="Chocolate"
+    Title="MushRoom"
+    Shell.BackgroundColor="Chocolate">
+
+
+    
+    
+
+    <Shell.FlyoutHeader>
+        <Image Source="mushroom_fly_header.png" Aspect="AspectFit"/>
+    </Shell.FlyoutHeader>
+
+
+
+    <FlyoutItem Title="Página Inicial" Icon="inicio_ico.png">
+        <ShellContent Title="" Icon="inicio_ico.png" ContentTemplate="{DataTemplate local:PaginaInicial}" Route="Views.PaginaInicial" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Fornecedores" Icon="fornecedor_ico.png">
+        <ShellContent Title="" ContentTemplate="{DataTemplate local:ListaFornecedor}" Route="Views.ListaFornecedor"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Compras" Icon="compras_ico.png">
+        <ShellContent Title="Compras" ContentTemplate="{DataTemplate local:Compras}" Route="Views.Compras"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Produtos" Icon="produto_ico.png">
+        <ShellContent Title="Produtos" ContentTemplate="{DataTemplate local:Produtos}" Route="Views.Produtos"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Produção" Icon="producao_ico.png">
+        <ShellContent Title="Produção" ContentTemplate="{DataTemplate local:Producao}" Route="Views.Producao"/>
+    </FlyoutItem>
+
+
+    <!--<ShellContent Title="" ContentTemplate="{DataTemplate local:Login}"  Route="Views.Login"/>-->
+
+
+</Shell>

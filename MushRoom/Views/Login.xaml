@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MushRoom.Views.Login"
+             BackgroundColor="Chocolate">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"/>
+    </Shell.BackButtonBehavior>
+    
+    
+    <VerticalStackLayout 
+        VerticalOptions="Center"
+        Spacing="5"
+        Padding="20">
+
+        <Image Source="mushroom_fly_header.png" 
+               VerticalOptions="StartAndExpand" 
+               HorizontalOptions="Start"
+               Margin="50"/>
+
+
+        <Label Text="Usuário:"/>
+        <Border Stroke="Black" StrokeShape="RoundRectangle 10">
+            <Entry x:Name="txt_usuario"/>
+        </Border>
+
+        <Label/>
+
+        <Label Text="Senha: "/>
+        <Border Stroke="Black" StrokeShape="RoundRectangle 10">
+            <Entry x:Name="txt_senha" IsPassword="True" />
+        </Border>
+
+        <Button Text="Entrar"
+                HorizontalOptions="Center" Clicked="Button_Clicked"
+                Margin="50"
+                BackgroundColor="#a85418"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

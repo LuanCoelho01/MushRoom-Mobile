@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MushRoom.Views.PaginaInicial"
+             xmlns:dg="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+             BackgroundColor="Chocolate">
+    
+    
+    
+    
+   
+    
+    <VerticalStackLayout>
+        <!--<Frame MaximumHeightRequest="150" MaximumWidthRequest="250" Margin="10" HorizontalOptions="Center">
+            <Label 
+            Text="Seja bem-vindo(a) ao sistema Mush &amp; Room!"
+            FontFamily="BebasNeue-Regular"
+            FontSize="21"
+            Padding="10"
+            Margin="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        
+        </Frame>-->
+
+
+
+        <Label x:Name="lbl_boasvindas"
+               HorizontalTextAlignment="Center"
+               FontFamily="BebasNeue-Regular"
+               FontSize="25"
+               Margin="20"/>
+        <Label/>
+
+        <VerticalStackLayout Margin="10, 0" Padding="10">
+            <Border 
+                Stroke="Black"
+                StrokeThickness="0.5"
+                StrokeShape="RoundRectangle 10"
+                MaximumWidthRequest="250">
+            <Label Text="Fornecedores" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </Border>
+        </VerticalStackLayout>
+        
+        <Frame Padding="10" Margin="10" BackgroundColor="#d77834">
+
+
+   
+
+                <VerticalStackLayout>
+
+                <ListView x:Name="lst_produtos"> 
+                    <ListView.Header>
+                        <Grid ColumnDefinitions="* , *, *, *" Padding="5"
+                              RowDefinitions="*, *">
+                            <!--<Label Grid.Column="0" Text="ID" />-->
+                            <Label Grid.Column="0" Text="Fornecedor" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="1" Text="Produto" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="2" Text=" CNPJ" FontAttributes="Bold" FontSize="12"  />
+                            <Label Grid.Column="3" Text="  Telefone" FontAttributes="Bold" FontSize="12" />
+                        </Grid>
+
+
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnDefinitions="*, *, *, *" HorizontalOptions="Fill"
+                                      RowDefinitions="*, *">
+                                    <!--<Label Grid.Column="0" Text="{Binding Id}" />-->
+                                    <Label Grid.Column="0" Text="{Binding NomeFornecedor}" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="1" Text="{Binding NomeProduto}" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="2" Text="{Binding CNPJ}" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="3" Text="{Binding Telefone}" FontSize="10" Padding="5" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Label/>
+        <VerticalStackLayout Margin="10, 0" Padding="10">
+            <Border 
+        Stroke="Black"
+        StrokeThickness="0.5"
+        StrokeShape="RoundRectangle 10"
+        MaximumWidthRequest="250">
+                <Label Text="Produção" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            </Border>
+        </VerticalStackLayout>
+
+
+        <Frame Padding="10" Margin="10" BackgroundColor="#d77834">
+
+
+
+
+            <VerticalStackLayout>
+                <!--<Frame BackgroundColor="Chocolate" Margin="10">
+        <Label Text="Fornecedores" HorizontalOptions="Center" Margin="10" FontSize="15" FontAttributes="Bold"/>
+</Frame>-->
+
+
+
+                <ListView>
+                    <!--ItemSelected="lst_produtos_ItemSelected"-->
+                    <ListView.Header>
+                        <Grid ColumnDefinitions="* , *, *, *" Padding="5"
+                         RowDefinitions="*, *, *">
+                            <!--<Label Grid.Column="0" Text="ID" />-->
+                            <Label Grid.Column="0" Text="  Produção" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="1" Text="  Informações" FontAttributes="Bold" FontSize="12" />
+                            <Label Grid.Column="2" Text=" Inicio" FontAttributes="Bold" FontSize="12"  />
+                            <Label Grid.Column="3" Text=" Término" FontAttributes="Bold" FontSize="12" />
+                            
+
+                            <Label Grid.Column="0" Grid.Row="1" Text="Cogumelos Paris" FontSize="10" Padding="5" />
+                            <Label Grid.Column="1" Grid.Row="1" Text="Em produção" FontSize="10" Padding="5" />
+                            <Label Grid.Column="2" Grid.Row="1" Text="25/05/2024" FontSize="10" Padding="5" />
+                            <Label Grid.Column="3" Grid.Row="1" Text="30/05/2024" FontSize="10" Padding="5" />
+
+
+
+                            <Label Grid.Column="0" Grid.Row="2" Text="Cogumelos Paris" FontSize="10" Padding="5" />
+                            <Label Grid.Column="1" Grid.Row="2" Text="Em produção" FontSize="10" Padding="5" />
+                            <Label Grid.Column="2" Grid.Row="2" Text="25/05/2024" FontSize="10" Padding="5" />
+                            <Label Grid.Column="3" Grid.Row="2" Text="30/05/2024" FontSize="10" Padding="5" />
+
+
+                        </Grid>
+
+
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnDefinitions="*, *, *, *" HorizontalOptions="Fill"
+                                 RowDefinitions="*, *, *">
+                                    <!--<Label Grid.Column="0" Text="{Binding Id}" />-->
+                                    <Label Grid.Column="0" Grid.Row="0" Text="Cogumelos Paris" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="1" Grid.Row="1" Text="Em produção" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="2" Grid.Row="2" Text="25/05/2024" FontSize="10" Padding="5" />
+                                    <Label Grid.Column="3" Grid.Row="3" Text="30/05/2024" FontSize="10" Padding="5" />
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </Frame>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

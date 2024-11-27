@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MushRoom.Views.NovoFornecedor"
+             Background="Chocolate">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/> 
+    </ContentPage.ToolbarItems>-->
+
+    <VerticalStackLayout>
+        <Label Text="Cadastrar fornecedor" FontFamily="BebasNeue-Regular" FontSize="25" HorizontalOptions="Center"/>
+
+        <Label/>
+
+        <VerticalStackLayout Spacing="8" Padding="10">
+            <Label Text=" Fornecedor" FontAttributes="Bold" />
+            <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
+                <Entry x:Name="txt_fornecedor" />
+            </Border>
+
+            <Label/>
+
+            <Label Text=" Produto"  FontAttributes="Bold"/>
+            <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
+                <Entry x:Name="txt_produto" />
+            </Border>
+
+            <Label/>
+
+            <Label Text=" CNPJ" FontAttributes="Bold" />
+            <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
+                <Entry x:Name="txt_cnpj" />
+            </Border>
+
+            <Label/>
+
+            <Label Text=" Telefone" FontAttributes="Bold"/>
+            <Border Stroke="Black" StrokeShape="RoundRectangle 10"  Background="#DA7D2B">
+                <Entry x:Name="txt_telefone" CursorPosition="20"/>
+            </Border>
+
+            <Label/>
+
+            <Border Margin="20"
+                MaximumWidthRequest="150"
+                Stroke="Black"
+                StrokeShape="RoundRectangle 10">
+                <Button Text="Salvar" Clicked="Button_Clicked" BackgroundColor="#DA7D2B"/>
+            </Border>
+
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
